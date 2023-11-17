@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    let data = ["functions", "roots", "palindroms", "primes", "roman numbers", "pascals", "fibonnachis", "eulers", "goldenRate", "logarithms", "algorithms","functions", "roots", "palindroms", "primes", "roman numbers", "pascals", "fibonnachis", "eulers", "goldenRate", "logarithms", "algorithms"]
     var body: some View {
-        VStack {
-            Image(systemName: "bicycle.circle.fill")
-                .imageScale(.large)
-                .font(.system(size: 150))
-                .foregroundStyle(.blue)
-                .tint(.blue)
-                .foregroundColor(Color(.systemRed))
-            Text("Hello, world!")
+        NavigationStack{
+            VStack {
+                Image(systemName: "compass.drawing")
+                    .imageScale(.large)
+                    .font(.system(size: 100))
+                    .foregroundStyle(.blue)
+                    .tint(.blue)
+                    .foregroundColor(Color(.systemRed))
+                Text("Happy to help you today!")
+            }
+            List {
+                ForEach(0..<data.count) { each in
+                    NavigationLink{
+                        RootCalculator()
+                        
+                       
+                    } label: { Text(data[each])}
+                }
+            }
+        }
+        .navigationTitle("Extra Mathematic Functions")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            
         }
     }
 }
@@ -24,3 +41,14 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+/*
+ let dataTypesArray = ["Integer", "String", "Float", "Double"]
+ var body: some View {
+     List {
+         ForEach(0..<dataTypesArray.count) { each in
+             Text(dataTypesArray[each])
+         }
+     }
+ }
+ */

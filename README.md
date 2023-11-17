@@ -1,4 +1,4 @@
-# LECalc
+f# LECalc
 Leonhard Euler's calculator - just because I was thinking 
 
 ## Purpouse 
