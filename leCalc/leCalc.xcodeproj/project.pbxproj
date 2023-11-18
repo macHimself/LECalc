@@ -17,6 +17,8 @@
 		6641B9C02B080CFE00DDCF8B /* DetailRootCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */; };
 		6641B9C32B092DDD00DDCF8B /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 6641B9C22B092DDD00DDCF8B /* SwiftMath */; };
 		6641B9C52B0930DB00DDCF8B /* mathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C42B0930DB00DDCF8B /* mathView.swift */; };
+		6641B9C72B09349100DDCF8B /* sectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C62B09349100DDCF8B /* sectionHeader.swift */; };
+		6641B9C92B093B9D00DDCF8B /* resultRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		6641B9B22B06773200DDCF8B /* leCalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leCalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRootCalculator.swift; sourceTree = "<group>"; };
 		6641B9C42B0930DB00DDCF8B /* mathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathView.swift; sourceTree = "<group>"; };
+		6641B9C62B09349100DDCF8B /* sectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sectionHeader.swift; sourceTree = "<group>"; };
+		6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				6641B99B2B06773200DDCF8B /* Preview Content */,
 				6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */,
 				6641B9C42B0930DB00DDCF8B /* mathView.swift */,
+				6641B9C62B09349100DDCF8B /* sectionHeader.swift */,
+				6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */,
 			);
 			path = leCalc;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 				6641B9972B06773100DDCF8B /* ContentView.swift in Sources */,
 				6641B9C02B080CFE00DDCF8B /* DetailRootCalculator.swift in Sources */,
 				6641B9C52B0930DB00DDCF8B /* mathView.swift in Sources */,
+				6641B9C72B09349100DDCF8B /* sectionHeader.swift in Sources */,
 				6641B9952B06773100DDCF8B /* leCalcApp.swift in Sources */,
+				6641B9C92B093B9D00DDCF8B /* resultRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
