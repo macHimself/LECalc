@@ -46,7 +46,7 @@ struct RootCalculator: View {
             HStack{
                 Form {
                     HStack{
-                        TextField(text: $a, prompt: Text("a const")) {
+                        TextField(text: $a, prompt: Text("a const")){
                             Text("a")
                         }
                         TextField(text: $b, prompt: Text("b const")) {
@@ -96,12 +96,13 @@ func presentFunction(_ a: String, _ b: String, _ c: String) -> [String] {
                 }
             }
         } else {
+            //TODO: add ignore for 1 in fornt of variable x or x^2
             let D = (bb * bb) - (4 * aa * cc)
             if D > 0 {
                 let xOne = ( -bb + sqrt(D))/(2*aa)
                 let xTwo = ( -bb - sqrt(D))/(2*aa)
-                rootOne = "x_{1|2} = \(fNum(xOne))"
-                rootTwo = "x_{1|2} = \(fNum(xTwo))"
+                rootOne = "x_{1} = \(fNum(xOne))"
+                rootTwo = "x_{2} = \(fNum(xTwo))"
                 rootY = "[x,y] = [0,\(fNum(cc))]"
                 let vx = (xOne + xTwo)/2
                 let vy = (aa * vx * vx) + (bb * vx) + cc
