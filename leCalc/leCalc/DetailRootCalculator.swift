@@ -7,53 +7,44 @@
 
 import Foundation
 import SwiftUI
+import SwiftMath
 
 struct RootCalculator: View {
     @State private var a: String = ""
     @State private var b: String = ""
     @State private var c: String = ""
     
-    
+    var ltxEquation: String = "ax^2 + bx + c = 0"
     
     var body: some View {
         VStack{
             Text("Root Calculator:")
                 .padding()
-            //.shadow(color: .red, radius: 3)
                 .shadow(color: .red, radius: 5, x: 10, y: 10)
-            //  .border(.red, width: 4)
         }
         VStack {
-            
-            Text("This calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation: \n\n\"ax^2 + bx + c\"")
+            MathView(equation: ltxEquation)
+                .frame(width: 100, height: 30)
+            Text("This calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation:")
                 .lineLimit(.bitWidth)
+            
+
         }
         Text(presentFunction(a,b,c))
         VStack{
             HStack{
                 Form {
-                   // HStack{
-                        TextField(text: $a, prompt: Text("a - the constant by x^2")) {
+                    HStack{
+                        TextField(text: $a, prompt: Text("a constant")) {
                             Text("a")
                         }
-                        TextField(text: $b, prompt: Text("b - the constant by x^1")) {
+                        TextField(text: $b, prompt: Text("b constnat")) {
                             Text("b")
                         }
-                        TextField(text: $c, prompt: Text("c - the constant by no x, x^0")) {
+                        TextField(text: $c, prompt: Text("c constant")) {
                             Text("c")
                         }
-                                
-                        
-                        
-                        
-                        //    TextField("a - the constant by x^2", text: $a)
-                        //    TextField("b - the constant by x^1", text: $b)
-                        //    TextField("c - the constant by no x, x^0", text: $c)
-                 //   }
-                    
-                    
-                    
-                    
+                    }
                 }
      
             }

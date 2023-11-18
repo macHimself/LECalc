@@ -15,6 +15,8 @@
 		6641B9B12B06773200DDCF8B /* leCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9B02B06773200DDCF8B /* leCalcUITests.swift */; };
 		6641B9B32B06773200DDCF8B /* leCalcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9B22B06773200DDCF8B /* leCalcUITestsLaunchTests.swift */; };
 		6641B9C02B080CFE00DDCF8B /* DetailRootCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */; };
+		6641B9C32B092DDD00DDCF8B /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 6641B9C22B092DDD00DDCF8B /* SwiftMath */; };
+		6641B9C52B0930DB00DDCF8B /* mathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C42B0930DB00DDCF8B /* mathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		6641B9B02B06773200DDCF8B /* leCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leCalcUITests.swift; sourceTree = "<group>"; };
 		6641B9B22B06773200DDCF8B /* leCalcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leCalcUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRootCalculator.swift; sourceTree = "<group>"; };
+		6641B9C42B0930DB00DDCF8B /* mathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6641B9C32B092DDD00DDCF8B /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 				6641B99A2B06773200DDCF8B /* leCalc.entitlements */,
 				6641B99B2B06773200DDCF8B /* Preview Content */,
 				6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */,
+				6641B9C42B0930DB00DDCF8B /* mathView.swift */,
 			);
 			path = leCalc;
 			sourceTree = "<group>";
@@ -148,6 +153,9 @@
 			dependencies = (
 			);
 			name = leCalc;
+			packageProductDependencies = (
+				6641B9C22B092DDD00DDCF8B /* SwiftMath */,
+			);
 			productName = leCalc;
 			productReference = 6641B9912B06773100DDCF8B /* leCalc.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 6641B9882B06773100DDCF8B;
+			packageReferences = (
+				6641B9C12B092DDD00DDCF8B /* XCRemoteSwiftPackageReference "SwiftMath" */,
+			);
 			productRefGroup = 6641B9922B06773100DDCF8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +275,7 @@
 			files = (
 				6641B9972B06773100DDCF8B /* ContentView.swift in Sources */,
 				6641B9C02B080CFE00DDCF8B /* DetailRootCalculator.swift in Sources */,
+				6641B9C52B0930DB00DDCF8B /* mathView.swift in Sources */,
 				6641B9952B06773100DDCF8B /* leCalcApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6641B9C12B092DDD00DDCF8B /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/SwiftMath";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6641B9C22B092DDD00DDCF8B /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6641B9C12B092DDD00DDCF8B /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6641B9892B06773100DDCF8B /* Project object */;
 }
