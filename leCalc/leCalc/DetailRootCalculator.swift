@@ -10,9 +10,9 @@ import SwiftUI
 import SwiftMath
 
 struct RootCalculator: View {
-    @State private var a: String = ""
-    @State private var b: String = ""
-    @State private var c: String = ""
+    @State private var a: String = "0"
+    @State private var b: String = "0"
+    @State private var c: String = "0"
     @State var showingDetails = false
     
     var ltxEquation: String = "ax^2 + bx + c = 0"
@@ -41,8 +41,7 @@ struct RootCalculator: View {
             }
         }
       //  MathView(equation:presentFunction(a,b,c))
-        ResultRepresentation(result: presentFunction(a,b,c))
-            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 110)
+
         VStack{
             HStack{
                 Form {
@@ -59,7 +58,9 @@ struct RootCalculator: View {
                     }
                 }
             }
-        }
+        }//.frame(height: 100)
+        ResultRepresentation(result: presentFunction(a,b,c))
+       //     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 170)
     }
 }
 
@@ -67,14 +68,77 @@ func presentFunction(_ a: String, _ b: String, _ c: String) -> [String] {
     var equation = ""
     var rootOne = ""
     var rootTwo = ""
+    var rootY = ""
+    var v = ""
     if isInt(a) && isInt(b) && isInt(c) {
-        equation = "wrong input"
-        let aa = Double(a)!
-        let bb = Double(b)!
-        let cc = Double(c)!
+
+        var aa = Double(a)!
+        var bb = Double(b)!
+        var cc = Double(c)!
+        if aa == 0 {
+            if bb != 0 {
+                if cc >= 0 {
+                    equation = "\(fNum(bb))x + \(fNum(cc)) = 0"
+                } else {
+                    equation = "\(fNum(bb))x \(fNum(cc)) = 0"
+                }
+                if -cc/bb == 0 {
+                    rootOne = "x = 0"
+                    rootY = "[x,y] = [0,\(fNum(cc))]"
+                } else {
+                    rootOne = "x = \(fNum(-cc/bb))"
+                    rootY = "[x,y] = [0,\(fNum(cc))]"
+                }
+            } else if bb == 0 {
+                equation = "\(fNum(cc)) = 0"
+                if cc > 0 {
+                    rootOne = "x \\in \\emptyset"
+                }
+            }
+        } else {
+            let D = (bb * bb) - (4 * aa * cc)
+            if D > 0 {
+                let xOne = ( -bb + sqrt(D))/(2*aa)
+                let xTwo = ( -bb - sqrt(D))/(2*aa)
+                rootOne = "x_{1|2} = \(fNum(xOne))"
+                rootTwo = "x_{1|2} = \(fNum(xTwo))"
+                rootY = "[x,y] = [0,\(fNum(cc))]"
+                let vx = (xOne + xTwo)/2
+                let vy = (aa * vx * vx) + (bb * vx) + cc
+                v = "V[x,y] = [\(fNum(vx)), \(fNum(vy))]"
+            } else if D == 0 {
+                let xOnly = ( -bb + sqrt(D))/(2*aa)
+                rootOne = "x_{1|2} = \(fNum(xOnly))"
+                rootY = "[x,y] = [0,\(fNum(cc))]"
+                let vx = xOnly
+                let vy = (aa * vx * vx) + (bb * vx) + cc
+                v = "V[x,y] = [\(fNum(vx)), \(fNum(vy))]"
+            } else if D < 0 {
+                rootOne = "x \\in \\emptyset"
+            }
+        }
+        if aa != 0 {
+            if bb < 0 {
+                if cc < 0 {
+                    equation = "\(fNum(aa))x^2 \(fNum(bb))x \(fNum(cc)) = 0"
+                } else if cc == 0 {
+                    equation = "\(fNum(aa))x^2 \(fNum(bb))x = 0"
+                } else {
+                    equation = "\(fNum(aa))x^2 \(fNum(bb))x + \(fNum(cc)) = 0"
+                }
+            } else {
+                if cc < 0 {
+                    equation = "\(fNum(aa))x^2 + \(fNum(bb))x \(fNum(cc)) = 0"
+                } else if cc == 0 {
+                    equation = "\(fNum(aa))x^2 + \(fNum(bb))x = 0"
+                } else {
+                    equation = "\(fNum(aa))x^2 + \(fNum(bb))x + \(fNum(cc)) = 0"
+                }
+            }
+        }
+        /*
         if aa == 0 && bb == 0 && cc == 0 {
             equation = "0=0"
-            
         } else if aa == 0 && bb == 0 && cc != 0 {
             equation = "\(fNum(cc))=0"
             rootOne = "\\emptyset" // rootOne = "\\mathbb{R}"
@@ -100,13 +164,15 @@ func presentFunction(_ a: String, _ b: String, _ c: String) -> [String] {
         } else if aa != 0 && bb == 0 && cc == 0 {
             equation = "\(fNum(aa)) x^2 = 0"
             rootOne = "x_{1|2} = 0"
-        }
+        }*/
         
+    } else {
+        //equation = "wrong input"
     }
     
     
     
-    return [equation,rootOne,rootTwo]
+    return [equation,rootOne,rootTwo,rootY,v]
 }
 
 func isInt(_ num: String) -> Bool {
