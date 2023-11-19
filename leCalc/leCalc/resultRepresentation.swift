@@ -11,10 +11,7 @@ import SwiftUI
 struct ResultRepresentation: View {
     let result: [String]
     @State var showingDetails = false
-//    var equation = result[0]
-  //  var rootOne = result[1]
-    //var rootTwo = result[2]
-    
+
     var body: some View {
         VStack {
             MathView(equation: result[0])

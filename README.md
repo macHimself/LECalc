@@ -1,4 +1,4 @@
-f# LECalc
+# LECalc
 Leonhard Euler's calculator - just because I was thinking 
 
 ## Purpouse 
@@ -36,3 +36,5 @@ plan to implement:
 - [ ] darkMode adaptation
 - [ ] graphs for functions 
 - [ ] XCTests for all functions
+- [ ] RegExp for Roman numbers
+- [ ] Way to write line above roman numbers to make more then 3999+ numbers

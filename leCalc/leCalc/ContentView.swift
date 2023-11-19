@@ -21,34 +21,24 @@ struct ContentView: View {
                 Text("Happy to help you today!")
             }
             List {
-                ForEach(0..<data.count) { each in
+             //   ForEach(0..<data.count) { each in
                     NavigationLink{
                         RootCalculator()
-                        
-                       
-                    } label: { Text(data[each])}
-                }
+                    } label: { Text("Roots")}
+                    NavigationLink{
+                        RomanNumbers()
+                    } label: { Text("Roman Numbers")}
+                  //} label: { Text(data[each])}
+             //   }
             }
         }
         .navigationTitle("Extra Mathematic Functions")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            
         }
     }
 }
 
-#Preview {
-    ContentView()
-}
-
-/*
- let dataTypesArray = ["Integer", "String", "Float", "Double"]
- var body: some View {
-     List {
-         ForEach(0..<dataTypesArray.count) { each in
-             Text(dataTypesArray[each])
-         }
-     }
- }
- */
+//#Preview {
+//    ContentView()
+//}
