@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		663887952B0A378700BEEAB0 /* QuadraticRoots.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QuadraticRoots.md; sourceTree = "<group>"; };
 		6641B9912B06773100DDCF8B /* leCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6641B9942B06773100DDCF8B /* leCalcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leCalcApp.swift; sourceTree = "<group>"; };
 		6641B9962B06773100DDCF8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,10 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663887942B0A373000BEEAB0 /* Tests-knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				663887952B0A378700BEEAB0 /* QuadraticRoots.md */,
+			);
+			path = "Tests-knowledge";
+			sourceTree = "<group>";
+		};
 		6641B9882B06773100DDCF8B = {
 			isa = PBXGroup;
 			children = (
 				6641B9932B06773100DDCF8B /* leCalc */,
+				663887942B0A373000BEEAB0 /* Tests-knowledge */,
 				6641B9A52B06773200DDCF8B /* leCalcTests */,
 				6641B9AF2B06773200DDCF8B /* leCalcUITests */,
 				6641B9922B06773100DDCF8B /* Products */,
