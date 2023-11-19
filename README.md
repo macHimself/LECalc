@@ -35,3 +35,4 @@ widgets
 plan to implement: 
 - [ ] darkMode adaptation
 - [ ] graphs for functions 
+- [ ] XCTests for all functions

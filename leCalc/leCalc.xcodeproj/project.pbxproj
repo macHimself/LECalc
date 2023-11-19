@@ -20,6 +20,7 @@
 		6641B9C72B09349100DDCF8B /* sectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C62B09349100DDCF8B /* sectionHeader.swift */; };
 		6641B9C92B093B9D00DDCF8B /* resultRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */; };
 		6641B9CB2B0A111A00DDCF8B /* plotGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9CA2B0A111A00DDCF8B /* plotGraph.swift */; };
+		6641B9CD2B0A2BE200DDCF8B /* SquareRootequation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6641B9C62B09349100DDCF8B /* sectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sectionHeader.swift; sourceTree = "<group>"; };
 		6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultRepresentation.swift; sourceTree = "<group>"; };
 		6641B9CA2B0A111A00DDCF8B /* plotGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plotGraph.swift; sourceTree = "<group>"; };
+		6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareRootequation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				6641B9B02B06773200DDCF8B /* leCalcUITests.swift */,
 				6641B9B22B06773200DDCF8B /* leCalcUITestsLaunchTests.swift */,
+				6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */,
 			);
 			path = leCalcUITests;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6641B9B32B06773200DDCF8B /* leCalcUITestsLaunchTests.swift in Sources */,
+				6641B9CD2B0A2BE200DDCF8B /* SquareRootequation.swift in Sources */,
 				6641B9B12B06773200DDCF8B /* leCalcUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
