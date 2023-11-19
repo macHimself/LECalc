@@ -42,7 +42,6 @@ struct RootCalculator: View {
                     .frame(width: 100, height: 35)
                     .shadow(color: .red, radius: 5, x: 10, y: 10)
             }
-            //  MathView(equation:presentFunction(a,b,c))
             VStack{
                 HStack{
                         HStack{
@@ -66,28 +65,12 @@ struct RootCalculator: View {
                         }.shadow(color: .gray, radius: 10, x: 1, y: 2)
                 }
             }
-            //.frame(height: 80)
-            //.background(.white)
         VStack{
             ResultRepresentation(result: presentFunction(a,b,c))
-            NavigationView {
-                VStack {
-                    NavigationLink(destination: HasGraph()) {
-                        Text("Go to Plot View")
-                    }
-                }
-               // .navigationTitle("Home")
-            }
         }
         Spacer()
-       // ScrollView{
-           
-            //     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 170)
-            //AnimatingLine(isOverview: true)
-            //.frame(width:100, height: 170)
-      //  }
     }
-    func hasGraph() -> Bool {return true}
+ //   func hasGraph() -> Bool {return true}
     
     func presentFunction(_ a: String, _ b: String, _ c: String) -> [String] {
         var equation = ""
@@ -96,9 +79,9 @@ struct RootCalculator: View {
         var rootY = ""
         var v = ""
         if isInt(a) && isInt(b) && isInt(c) {
-            var aa = Double(a)!
-            var bb = Double(b)!
-            var cc = Double(c)!
+            let aa = Double(a)!
+            let bb = Double(b)!
+            let cc = Double(c)!
             if aa == 0 {
                 if bb != 0 {
                     if -cc/bb == 0 {
