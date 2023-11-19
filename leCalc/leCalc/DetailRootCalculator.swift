@@ -14,11 +14,10 @@ struct RootCalculator: View {
     @State private var b: String = ""
     @State private var c: String = ""
     @State var showingDetails = false
-    
+
     var ltxEquation: String = "ax^2 + bx + c = 0"
     
     var body: some View {
-
             VStack{
                 Text("Root Calculator:")
                     .padding()
@@ -33,21 +32,17 @@ struct RootCalculator: View {
             )
         ) {
             if showingDetails {
-                
-                    Text("\nThis calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation:")
-                        .lineLimit(.bitWidth)
-                        .frame(height: 135)
-                
+                Text("\nThis calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation:")
+                    .lineLimit(.bitWidth)
+                    .frame(height: 135)
             }
         }
             VStack {
                 MathView(equation: ltxEquation)
                     .frame(width: 100, height: 35)
                     .shadow(color: .red, radius: 5, x: 10, y: 10)
-
             }
             //  MathView(equation:presentFunction(a,b,c))
-            
             VStack{
                 HStack{
                         HStack{
@@ -73,7 +68,17 @@ struct RootCalculator: View {
             }
             //.frame(height: 80)
             //.background(.white)
-        ResultRepresentation(result: presentFunction(a,b,c))
+        VStack{
+            ResultRepresentation(result: presentFunction(a,b,c))
+            NavigationView {
+                VStack {
+                    NavigationLink(destination: HasGraph()) {
+                        Text("Go to Plot View")
+                    }
+                }
+               // .navigationTitle("Home")
+            }
+        }
         Spacer()
        // ScrollView{
            
@@ -82,6 +87,8 @@ struct RootCalculator: View {
             //.frame(width:100, height: 170)
       //  }
     }
+    func hasGraph() -> Bool {return true}
+    
     func presentFunction(_ a: String, _ b: String, _ c: String) -> [String] {
         var equation = ""
         var rootOne = ""
@@ -89,7 +96,6 @@ struct RootCalculator: View {
         var rootY = ""
         var v = ""
         if isInt(a) && isInt(b) && isInt(c) {
-
             var aa = Double(a)!
             var bb = Double(b)!
             var cc = Double(c)!
@@ -171,9 +177,6 @@ struct RootCalculator: View {
                 equation += "=0"
             }
         }
-        
-        
-        
         return [equation,rootOne,rootTwo,rootY,v]
     }
 
@@ -193,6 +196,5 @@ struct RootCalculator: View {
     }
 
     func isInteger (_ num: Double) -> Bool { return floor(num) == num }
-
 }
 
