@@ -50,11 +50,5 @@ V[x,y] = [-b/2a; (4ac-b^2)/4a]
 
 ##### sources:
 https://www.karlin.mff.cuni.cz/~portal/funkce/?page=vrkf
+
 https://en.wikipedia.org/wiki/Parabola
-
-
-
-
-
-("["x^2-4=0", "x_{1}=2", "x_{2}=-2", "[x,y]=[0,-4]", "V[x,y]=[0,-4]"]") is not equal to 
-("["x^2+4=0", "x_{1}=2", "x_{2}=-2", "[x,y]=[0,-4]", "V[x,y]=[0,-4]"]")
