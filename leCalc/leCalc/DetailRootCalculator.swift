@@ -10,57 +10,75 @@ import SwiftUI
 import SwiftMath
 
 struct RootCalculator: View {
-    @State private var a: String = "0"
-    @State private var b: String = "0"
-    @State private var c: String = "0"
+    @State private var a: String = ""
+    @State private var b: String = ""
+    @State private var c: String = ""
     @State var showingDetails = false
     
     var ltxEquation: String = "ax^2 + bx + c = 0"
     
     var body: some View {
-        VStack{
-            Text("Root Calculator:")
-                .padding()
-                .shadow(color: .red, radius: 5, x: 10, y: 10)
-        }
-        VStack {
-            MathView(equation: ltxEquation)
-                .frame(width: 100, height: 35)
-            Section(
-                    header: SectionHeader(
-                      title: "...",
-                      isOn: $showingDetails,
-                      onLabel: "<<<",
-                      offLabel: ">>>"
-                    )
-            ) {
-                if showingDetails {
-                    Text("\nThis calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation:")
-                        .lineLimit(.bitWidth)
-                }
-            }
-        }
-      //  MathView(equation:presentFunction(a,b,c))
 
-        VStack{
-            HStack{
-                Form {
-                    HStack{
-                        TextField(text: $a, prompt: Text("a const")){
-                            Text("a")
-                        }
-                        TextField(text: $b, prompt: Text("b const")) {
-                            Text("b")
-                        }
-                        TextField(text: $c, prompt: Text("c const")) {
-                            Text("c")
-                        }
+            VStack{
+                Text("Root Calculator:")
+                    .padding()
+                    .shadow(color: .red, radius: 5, x: 10, y: 10)
+            }
+            VStack {
+                MathView(equation: ltxEquation)
+                    .frame(width: 100, height: 35)
+                    .shadow(color: .red, radius: 5, x: 10, y: 10)
+                Section(
+                    header: SectionHeader(
+                        title: "...",
+                        isOn: $showingDetails,
+                        onLabel: "<<<",
+                        offLabel: ">>>"
+                    )
+                ) {
+                    if showingDetails {
+                        
+                            Text("\nThis calculator is meant to gave you the easy and quick answer, what are the roots for quadratic funtion. Just provide here the constants numbers a,b and c from the equation:")
+                                .lineLimit(.bitWidth)
+                                .frame(height: 100)
+                        
                     }
                 }
             }
-        }//.frame(height: 100)
+            //  MathView(equation:presentFunction(a,b,c))
+            
+            VStack{
+                HStack{
+                        HStack{
+                            Spacer()
+                            TextField(text: $a, prompt: Text("a const")){
+                                Text("a")
+                            }.frame(width:75)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numbersAndPunctuation)
+                            TextField(text: $b, prompt: Text("b const")) {
+                                Text("b")
+                            }.frame(width:75)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numbersAndPunctuation)
+                            TextField(text: $c, prompt: Text("c const")) {
+                                Text("c")
+                            }.frame(width:75)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numbersAndPunctuation)
+                            Spacer()
+                        }.shadow(color: .gray, radius: 10, x: 1, y: 2)
+                }
+            }
+            //.frame(height: 80)
+            //.background(.white)
         ResultRepresentation(result: presentFunction(a,b,c))
-       //     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 170)
+       // ScrollView{
+           
+            //     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 170)
+            //AnimatingLine(isOverview: true)
+            //.frame(width:100, height: 170)
+      //  }
     }
 }
 
