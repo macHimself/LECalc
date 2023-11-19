@@ -125,7 +125,7 @@ struct RootCalculator: View {
                     rootY = "[x,y]=[0,\(fNum(cc))]"
                     let vx = xOnly
                     let vy = (aa * vx * vx) + (bb * vx) + cc
-                    v = "V[x,y]=[\(fNum(vx)), \(fNum(vy))]"
+                    v = "V[x,y]=[\(fNum(vx)),\(fNum(vy))]"
                 } else if D < 0 {
                     rootOne = "x\\in\\emptyset"
                 }
@@ -158,7 +158,7 @@ struct RootCalculator: View {
                 if cc < 0 {
                     equation += "\(fNum(cc))"
                 } else if cc > 0 && (aa != 0 || bb != 0) {
-                    equation += "+ \(fNum(cc))"
+                    equation += "+\(fNum(cc))"
                 } else if cc > 0 && aa == 0 && bb == 0 {
                     equation += "\(fNum(cc))"
                 } else if cc == 0 {
