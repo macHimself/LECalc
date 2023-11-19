@@ -9,29 +9,29 @@ This code is meant to be part of my presentation of my skills as same as my spac
 #### Ideas to implement
 
 calculator that will provide several non standard actions/functions: 
--[ ] combinatoric numbers
--[ ] factorials
--[ ] fibnacchi numbers 
--[ ] golder rate
--[ ] logarithms
--[ ] palindromic numbers
--[ ] pascal's triangle
--[ ] prime numbers
--[ ] quadratic roots
--[ ] random numbers
--[ ] right triangle
--[ ] roll of the dice (statistics)
--[ ] roll of the dice (proability)
--[ ] roman numbers
--[ ] variations
+- [ ] combinatoric numbers
+- [ ] factorials
+- [ ] fibnacchi numbers 
+- [ ] golder rate
+- [ ] logarithms
+- [ ] palindromic numbers
+- [ ] pascal's triangle
+- [ ] prime numbers
+- [ ] quadratic roots
+- [ ] random numbers
+- [ ] right triangle
+- [ ] roll of the dice (statistics)
+- [ ] roll of the dice (proability)
+- [ ] roman numbers
+- [ ] variations
 
 widgets 
--[ ] standard calculator for lock screen of iPhone
--[ ] standard calculator for macBook as widget on wall  
+- [ ] standard calculator for lock screen of iPhone
+- [ ] standard calculator for macBook as widget on wall  
 
 
 #### TODOs: 
 
 plan to implement: 
--[] darkMode adaptation
--[] graphs for functions 
+- [ ] darkMode adaptation
+- [ ] graphs for functions 
