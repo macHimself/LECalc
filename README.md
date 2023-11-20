@@ -33,8 +33,9 @@ widgets
 #### TODOs: 
 
 plan to implement: 
-- [ ] darkMode adaptation
+- [ ][x] darkMode adaptation (it started to work)
 - [ ] graphs for functions 
 - [ ] XCTests for all functions
 - [ ] RegExp for Roman numbers
 - [ ] Way to write line above roman numbers to make more then 3999+ numbers
+- [ ] Add special font just for representating RomanNumbers 

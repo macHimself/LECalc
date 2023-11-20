@@ -30,7 +30,7 @@ struct RomanNumbers: View {
             ))
         {
             if showingDetails {
-                Text("I = 1 **I** = 4000\nV = 5\nX = 10\nL = 50\nC = 100\nD = 500\nM = 1000")
+                Text("I = 1\nV = 5\nX = 10\nL = 50\nC = 100\nD = 500\nM = 1000")
                     .lineLimit(.bitWidth)
                     .frame(height: 170)
             }
@@ -43,6 +43,7 @@ struct RomanNumbers: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.numbersAndPunctuation)
             Text(getRomanNumber(arabicNum))
+                //.font(Font.custom("RobotoMono-Bold", size: 18))
             Spacer()
             TextField(text: $romanNum, prompt: Text("roman number")) {
                 Text("roman number")
@@ -52,11 +53,67 @@ struct RomanNumbers: View {
                 .keyboardType(.numbersAndPunctuation)
             Text(getArabicNumber(romanNum))
             Spacer()
+            Spacer()
     }
+    
+
+    func isInt(_ string: String) -> Bool {
+            return Int(string) != nil
+        }
     
     func getRomanNumber(_ num: String) -> String {
         var romanNumber = ""
-        
+        if isInt(num) {
+            var iNum = Int(num)!
+            if iNum > 3999 || iNum < 0 {
+                return "please, insert number 0-3999"
+            } else {
+                for _ in 0...iNum {
+                    if iNum / 1000 != 0 {
+                        romanNumber += "M"
+                        iNum = iNum - 1000
+                    } else if iNum / 900 != 0 {
+                        romanNumber += "CM"
+                        iNum = iNum - 900
+                    } else if iNum / 500 != 0 {
+                        romanNumber += "D"
+                        iNum = iNum - 500
+                    } else if iNum / 400 != 0 {
+                        romanNumber += "CD"
+                        iNum = iNum - 400
+                    } else if iNum / 100 != 0 {
+                        romanNumber += "C"
+                        iNum = iNum - 100
+                    } else if iNum / 90 != 0 {
+                        romanNumber += "XC"
+                        iNum = iNum - 90
+                    } else if iNum / 50 != 0 {
+                        romanNumber += "L"
+                        iNum = iNum - 50
+                    } else if iNum / 40 != 0 {
+                        romanNumber += "XL"
+                        iNum = iNum - 40
+                    } else if iNum / 10 != 0 {
+                        romanNumber += "X"
+                        iNum = iNum - 10
+                    } else if iNum / 9 != 0 {
+                        romanNumber += "IX"
+                        iNum = iNum - 9
+                    } else if iNum / 5 != 0 {
+                        romanNumber += "V"
+                        iNum = iNum - 5
+                    } else if iNum / 4 != 0 {
+                        romanNumber += "IV"
+                        iNum = iNum - 4
+                    } else if iNum / 1 != 0 {
+                        romanNumber += "I"
+                        iNum = iNum - 1
+                    }
+                }
+            }
+        } else {
+            return "please, insert number 0-3999"
+        }
         return romanNumber
     }
     

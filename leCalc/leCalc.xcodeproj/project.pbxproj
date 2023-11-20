@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66211C032B0AA4E70041BF88 /* RomanNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C022B0AA4E70041BF88 /* RomanNumbers.swift */; };
+		66211C1A2B0C036B0041BF88 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66211C0C2B0C036B0041BF88 /* RobotoMono-Bold.ttf */; };
 		663887932B0A31D700BEEAB0 /* SquareRootequation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */; };
 		663887982B0A69D300BEEAB0 /* HasGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663887972B0A69D200BEEAB0 /* HasGraph.swift */; };
 		6638879B2B0A7A5B00BEEAB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6638879A2B0A7A5B00BEEAB0 /* SwiftUICharts */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		66211C022B0AA4E70041BF88 /* RomanNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumbers.swift; sourceTree = "<group>"; };
+		66211C0C2B0C036B0041BF88 /* RobotoMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Bold.ttf"; sourceTree = "<group>"; };
 		663887952B0A378700BEEAB0 /* QuadraticRoots.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QuadraticRoots.md; sourceTree = "<group>"; };
 		663887972B0A69D200BEEAB0 /* HasGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasGraph.swift; sourceTree = "<group>"; };
 		6641B9912B06773100DDCF8B /* leCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66211C042B0C03530041BF88 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66211C0C2B0C036B0041BF88 /* RobotoMono-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		663887942B0A373000BEEAB0 /* Tests-knowledge */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		6641B9932B06773100DDCF8B /* leCalc */ = {
 			isa = PBXGroup;
 			children = (
+				66211C042B0C03530041BF88 /* Fonts */,
 				6641B9942B06773100DDCF8B /* leCalcApp.swift */,
 				6641B9962B06773100DDCF8B /* ContentView.swift */,
 				6641B9982B06773200DDCF8B /* Assets.xcassets */,
@@ -277,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6641B99D2B06773200DDCF8B /* Preview Assets.xcassets in Resources */,
+				66211C1A2B0C036B0041BF88 /* RobotoMono-Bold.ttf in Resources */,
 				6641B9992B06773200DDCF8B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
