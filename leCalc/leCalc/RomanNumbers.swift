@@ -43,14 +43,17 @@ struct RomanNumbers: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.numbersAndPunctuation)
             Text(getRomanNumber(arabicNum))
+            .font(.system(size: 18, weight: .black))
                 //.font(Font.custom("RobotoMono-Bold", size: 18))
             Spacer()
             TextField(text: $romanNum, prompt: Text("roman number")) {
                 Text("roman number")
+                    
             }
                 .frame(width:180)
                 .multilineTextAlignment(.center)
                 .keyboardType(.numbersAndPunctuation)
+                .font(.system(size: 18, weight: .black))
             Text(getArabicNumber(romanNum))
             Spacer()
             Spacer()
@@ -119,7 +122,7 @@ struct RomanNumbers: View {
     
     func getArabicNumber(_ num: String) -> String {
         var arabicNum = 0
-        let arr = Array(num)
+        let arr = Array(num.uppercased())
         if arr.count > 0 {
             for index in 0...arr.count-1 {
                 switch arr[index] {
