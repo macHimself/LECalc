@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let data = ["functions", "roots", "palindroms", "primes", "roman numbers", "pascals", "fibonnachis", "eulers", "goldenRate", "logarithms", "algorithms","functions", "roots", "palindroms", "primes", "roman numbers", "pascals", "fibonnachis", "eulers", "goldenRate", "logarithms", "algorithms"]
+    let data = ["functions", "roots", "palindroms", "primes", "roman numbers", "pascals", "fibonnachis", "eulers", "goldenRate", "logarithms", "algorithms"]
     var body: some View {
         NavigationStack{
             VStack {
@@ -22,6 +22,9 @@ struct ContentView: View {
             }
             List {
              //   ForEach(0..<data.count) { each in
+                NavigationLink{
+                    IntegerFactorization()
+                } label: { Text("Integer Factorization")}
                     NavigationLink{
                         RootCalculator()
                     } label: { Text("Roots")}

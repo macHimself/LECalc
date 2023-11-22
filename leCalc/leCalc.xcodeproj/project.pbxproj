@@ -10,6 +10,7 @@
 		66211C032B0AA4E70041BF88 /* RomanNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C022B0AA4E70041BF88 /* RomanNumbers.swift */; };
 		66211C1A2B0C036B0041BF88 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66211C0C2B0C036B0041BF88 /* RobotoMono-Bold.ttf */; };
 		66211C232B0E854E0041BF88 /* RomanNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C222B0E854E0041BF88 /* RomanNumbers.swift */; };
+		66211C2B2B0E90AF0041BF88 /* IntegerFactorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C2A2B0E90AF0041BF88 /* IntegerFactorization.swift */; };
 		663887932B0A31D700BEEAB0 /* SquareRootequation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */; };
 		663887982B0A69D300BEEAB0 /* HasGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663887972B0A69D200BEEAB0 /* HasGraph.swift */; };
 		6638879B2B0A7A5B00BEEAB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6638879A2B0A7A5B00BEEAB0 /* SwiftUICharts */; };
@@ -49,6 +50,7 @@
 		66211C0C2B0C036B0041BF88 /* RobotoMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Bold.ttf"; sourceTree = "<group>"; };
 		66211C212B0E84B60041BF88 /* RomanNumbers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RomanNumbers.md; sourceTree = "<group>"; };
 		66211C222B0E854E0041BF88 /* RomanNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumbers.swift; sourceTree = "<group>"; };
+		66211C2A2B0E90AF0041BF88 /* IntegerFactorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerFactorization.swift; sourceTree = "<group>"; };
 		663887952B0A378700BEEAB0 /* QuadraticRoots.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QuadraticRoots.md; sourceTree = "<group>"; };
 		663887972B0A69D200BEEAB0 /* HasGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasGraph.swift; sourceTree = "<group>"; };
 		6641B9912B06773100DDCF8B /* leCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				663887972B0A69D200BEEAB0 /* HasGraph.swift */,
 				6641B9C62B09349100DDCF8B /* sectionHeader.swift */,
 				6641B9C42B0930DB00DDCF8B /* mathView.swift */,
+				66211C272B0E900A0041BF88 /* Primes-IntegerFactorisation */,
 				66211C262B0E8E210041BF88 /* Roman */,
 				66211C252B0E8E140041BF88 /* Root */,
 			);
@@ -132,6 +135,14 @@
 				66211C022B0AA4E70041BF88 /* RomanNumbers.swift */,
 			);
 			path = Roman;
+			sourceTree = "<group>";
+		};
+		66211C272B0E900A0041BF88 /* Primes-IntegerFactorisation */ = {
+			isa = PBXGroup;
+			children = (
+				66211C2A2B0E90AF0041BF88 /* IntegerFactorization.swift */,
+			);
+			path = "Primes-IntegerFactorisation";
 			sourceTree = "<group>";
 		};
 		663887942B0A373000BEEAB0 /* Tests-knowledge */ = {
@@ -345,6 +356,7 @@
 			files = (
 				6641B9972B06773100DDCF8B /* ContentView.swift in Sources */,
 				6641B9C02B080CFE00DDCF8B /* DetailRootCalculator.swift in Sources */,
+				66211C2B2B0E90AF0041BF88 /* IntegerFactorization.swift in Sources */,
 				6641B9C52B0930DB00DDCF8B /* mathView.swift in Sources */,
 				6641B9C72B09349100DDCF8B /* sectionHeader.swift in Sources */,
 				6641B9952B06773100DDCF8B /* leCalcApp.swift in Sources */,
