@@ -13,7 +13,8 @@ struct RomanNumbers: View {
     @State private var arabicNum: String = ""
     @State private var romanNum: String = ""
     @State var showingDetails = false
-    var ltxEquation: String = "ax^2 + bx + c = 0"
+  //  var isValid = true
+  //  var ltxEquation: String = "ax^2 + bx + c = 0"
     
     var body: some View {
         VStack{
@@ -39,7 +40,7 @@ struct RomanNumbers: View {
             TextField(text: $arabicNum, prompt: Text("arabic number")){
                 Text("arabic number")
             }
-                .frame(width:180)
+                .frame(width:280)
                 .multilineTextAlignment(.center)
                 .keyboardType(.numbersAndPunctuation)
             Text(getRomanNumber(arabicNum))
@@ -55,6 +56,8 @@ struct RomanNumbers: View {
                 .keyboardType(.numbersAndPunctuation)
                 .font(.system(size: 18, weight: .black))
             Text(getArabicNumber(romanNum))
+            .strikethrough(!validateInput(text: romanNum.uppercased()))
+           // .foregroundColor(validateInput(text: romanNum.uppercased()) ? .black : .red)
             Spacer()
             Spacer()
     }
@@ -120,9 +123,25 @@ struct RomanNumbers: View {
         return romanNumber
     }
     
+    func validateInput(text: String) -> Bool {
+        do {
+            let regexPattern = #"^(?=[MDCLXVI])M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"#
+            let regex = try NSRegularExpression(pattern: regexPattern)
+            let range = NSRange(location: 0, length: text.utf16.count)
+            let matches = regex.numberOfMatches(in: text, options: [], range: range)
+            return matches > 0
+        } catch {
+            return false
+        }
+    }
+    
     func getArabicNumber(_ num: String) -> String {
         var arabicNum = 0
+        var answer = ""
         let arr = Array(num.uppercased())
+        if validateInput(text: num.uppercased()) == false {
+            answer += "!!!"
+        }
         if arr.count > 0 {
             for index in 0...arr.count-1 {
                 switch arr[index] {
@@ -131,7 +150,8 @@ struct RomanNumbers: View {
                 case "D":
                     arabicNum += 500
                 case "C":
-                    if index+1 < arr.count-1 && (arr[index+1] == "M" || arr[index+1] == "D") {
+                    
+                    if index+1 < arr.count && (arr[index+1] == "M" || arr[index+1] == "D") {
                         arabicNum += -100
                     } else {
                         arabicNum += 100
@@ -139,7 +159,7 @@ struct RomanNumbers: View {
                 case "L":
                     arabicNum += 50
                 case "X":
-                    if index+1 < arr.count-1 && (arr[index+1] == "C" || arr[index+1] == "L") {
+                    if index+1 < arr.count && (arr[index+1] == "C" || arr[index+1] == "L") {
                         arabicNum += -10
                     } else {
                         arabicNum += 10
@@ -147,7 +167,7 @@ struct RomanNumbers: View {
                 case "V":
                     arabicNum += 5
                 case "I":
-                    if index+1 < arr.count-1 && (arr[index+1] == "X" || arr[index+1] == "V") {
+                    if index+1 < arr.count && (arr[index+1] == "X" || arr[index+1] == "V") {
                         arabicNum += -1
                     } else {
                         arabicNum += 1
@@ -157,7 +177,7 @@ struct RomanNumbers: View {
                 }
             }
         }
-        return "\(arabicNum)"
+        return answer + "\(arabicNum)" + answer
     }
 }
 
