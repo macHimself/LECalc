@@ -113,14 +113,14 @@ struct IntegerFactorization: View {
         //TODO: ordered print of numbers
         for (key, amount) in nums {
             if key != "" {
-                equation += "\(key)^\(amount) ."
+                equation += "\(key)^{\(amount)} ."
             }
             
         }
         equation = equation.replacingOccurrences(of: "please insert composite number", with: "")
         equation = equation.replacingOccurrences(of: "please use Integer > 1", with: "please: n \\in (1;99999999)")
         equation = equation.replacingOccurrences(of: " is prime number^1", with: "\\in\\mathbb{P}")
-        equation = equation.replacingOccurrences(of: "^1", with: " ")
+        equation = equation.replacingOccurrences(of: "{^1}", with: " ")
         return equation
     }
 }
