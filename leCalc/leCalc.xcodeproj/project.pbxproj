@@ -12,6 +12,7 @@
 		66211C232B0E854E0041BF88 /* RomanNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C222B0E854E0041BF88 /* RomanNumbers.swift */; };
 		66211C2B2B0E90AF0041BF88 /* IntegerFactorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C2A2B0E90AF0041BF88 /* IntegerFactorization.swift */; };
 		66211C2D2B0EA8D00041BF88 /* IntegerFactorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66211C2C2B0EA8D00041BF88 /* IntegerFactorization.swift */; };
+		66211C2F2B0EAFBC0041BF88 /* IntegerFactorization.md in Resources */ = {isa = PBXBuildFile; fileRef = 66211C2E2B0EAFBC0041BF88 /* IntegerFactorization.md */; };
 		663887932B0A31D700BEEAB0 /* SquareRootequation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6641B9CC2B0A2BE200DDCF8B /* SquareRootequation.swift */; };
 		663887982B0A69D300BEEAB0 /* HasGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663887972B0A69D200BEEAB0 /* HasGraph.swift */; };
 		6638879B2B0A7A5B00BEEAB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6638879A2B0A7A5B00BEEAB0 /* SwiftUICharts */; };
@@ -53,6 +54,7 @@
 		66211C222B0E854E0041BF88 /* RomanNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumbers.swift; sourceTree = "<group>"; };
 		66211C2A2B0E90AF0041BF88 /* IntegerFactorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerFactorization.swift; sourceTree = "<group>"; };
 		66211C2C2B0EA8D00041BF88 /* IntegerFactorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerFactorization.swift; sourceTree = "<group>"; };
+		66211C2E2B0EAFBC0041BF88 /* IntegerFactorization.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = IntegerFactorization.md; sourceTree = "<group>"; };
 		663887952B0A378700BEEAB0 /* QuadraticRoots.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QuadraticRoots.md; sourceTree = "<group>"; };
 		663887972B0A69D200BEEAB0 /* HasGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasGraph.swift; sourceTree = "<group>"; };
 		6641B9912B06773100DDCF8B /* leCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				663887952B0A378700BEEAB0 /* QuadraticRoots.md */,
+				66211C2E2B0EAFBC0041BF88 /* IntegerFactorization.md */,
 				66211C212B0E84B60041BF88 /* RomanNumbers.md */,
 			);
 			path = "Tests-knowledge";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6641B99D2B06773200DDCF8B /* Preview Assets.xcassets in Resources */,
+				66211C2F2B0EAFBC0041BF88 /* IntegerFactorization.md in Resources */,
 				66211C1A2B0C036B0041BF88 /* RobotoMono-Bold.ttf in Resources */,
 				6641B9992B06773200DDCF8B /* Assets.xcassets in Resources */,
 			);
