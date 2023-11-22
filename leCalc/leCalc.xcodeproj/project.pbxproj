@@ -104,6 +104,36 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		66211C242B0E8E040041BF88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6641B9962B06773100DDCF8B /* ContentView.swift */,
+				663887972B0A69D200BEEAB0 /* HasGraph.swift */,
+				6641B9C62B09349100DDCF8B /* sectionHeader.swift */,
+				6641B9C42B0930DB00DDCF8B /* mathView.swift */,
+				66211C262B0E8E210041BF88 /* Roman */,
+				66211C252B0E8E140041BF88 /* Root */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66211C252B0E8E140041BF88 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */,
+				6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		66211C262B0E8E210041BF88 /* Roman */ = {
+			isa = PBXGroup;
+			children = (
+				66211C022B0AA4E70041BF88 /* RomanNumbers.swift */,
+			);
+			path = Roman;
+			sourceTree = "<group>";
+		};
 		663887942B0A373000BEEAB0 /* Tests-knowledge */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,18 +167,12 @@
 		6641B9932B06773100DDCF8B /* leCalc */ = {
 			isa = PBXGroup;
 			children = (
+				66211C242B0E8E040041BF88 /* View */,
 				66211C042B0C03530041BF88 /* Fonts */,
 				6641B9942B06773100DDCF8B /* leCalcApp.swift */,
-				6641B9962B06773100DDCF8B /* ContentView.swift */,
 				6641B9982B06773200DDCF8B /* Assets.xcassets */,
 				6641B99A2B06773200DDCF8B /* leCalc.entitlements */,
 				6641B99B2B06773200DDCF8B /* Preview Content */,
-				6641B9BF2B080CFE00DDCF8B /* DetailRootCalculator.swift */,
-				6641B9C42B0930DB00DDCF8B /* mathView.swift */,
-				6641B9C62B09349100DDCF8B /* sectionHeader.swift */,
-				6641B9C82B093B9D00DDCF8B /* resultRepresentation.swift */,
-				663887972B0A69D200BEEAB0 /* HasGraph.swift */,
-				66211C022B0AA4E70041BF88 /* RomanNumbers.swift */,
 			);
 			path = leCalc;
 			sourceTree = "<group>";
