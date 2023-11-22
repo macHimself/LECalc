@@ -34,7 +34,7 @@ calculator that will provide several non standard actions/functions:
 - [ ] right triangle 🔵
 - [ ] roll of the dice (statistics) 🔵
 - [ ] roll of the dice (proability) 🔵
-- [ ] roman numbers 🟠 
+- [ ] roman numbers 🟡 
 - [ ] variations ⚫️
 
 widgets 

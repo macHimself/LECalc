@@ -31,9 +31,10 @@ struct RomanNumbers: View {
             ))
         {
             if showingDetails {
-                Text("I = 1\nV = 5\nX = 10\nL = 50\nC = 100\nD = 500\nM = 1000")
+                Text("Roman numerals are a numeral system that originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. Numbers are written with combinations of letters from the Latin alphabet, each letter with a fixed integer value. Modern style uses only these seven: I = 1 .. V = 5 .. X = 10 .. L = 50 .. C = 100 .. D = 500 .. M = 1000")
                     .lineLimit(.bitWidth)
-                    .frame(height: 170)
+                    .frame(height: 100)
+                    .font(.system(size: 10))
             }
         }
         Spacer()
