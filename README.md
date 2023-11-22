@@ -24,6 +24,7 @@ calculator that will provide several non standard actions/functions:
 - [ ] factorials ⚫️ 
 - [ ] fibnacchi numbers 
 - [ ] golder rate ⚫️ 
+- [ ] integer factorization 🟡
 - [ ] logarithms ⚫️ 
 - [ ] palindromic numbers ⚫️ 
 - [ ] pascal's triangle ⚫️ 
@@ -46,8 +47,10 @@ widgets
 
 plan to implement: 
 - [ ] darkMode adaptation (it started to work / need more tests!)
-- [ ] graphs for functions 
+- [ ] NiceToHave: graphs for functions 
 - [ ] XCTests for all functions
-- [ ] RegExp for Roman numbers
-- [ ] Way to write line above roman numbers to make more then 3999+ numbers
-- [ ] Add special font just for representating RomanNumbers 
+- [x] RegExp for Roman numbers (school excercise + chatGPT help)
+- [ ] NiceToHave: Way to write line above roman numbers to make more then 3999+ numbers 
+- [ ] Add special font just for representating RomanNumbers 🟠 (solved by Bold, for now) 
+- [ ] Work on macOS UI 
+- [ ] Improve iOS UI

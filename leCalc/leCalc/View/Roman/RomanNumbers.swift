@@ -43,7 +43,9 @@ struct RomanNumbers: View {
             }
                 .frame(width:280)
                 .multilineTextAlignment(.center)
+#if os(iOS)
                 .keyboardType(.numbersAndPunctuation)
+#endif
             Text(getRomanNumber(arabicNum))
             .font(.system(size: 18, weight: .black))
                 //.font(Font.custom("RobotoMono-Bold", size: 18))
@@ -54,7 +56,9 @@ struct RomanNumbers: View {
             }
                 .frame(width:180)
                 .multilineTextAlignment(.center)
+#if os(iOS)
                 .keyboardType(.numbersAndPunctuation)
+#endif
                 .font(.system(size: 18, weight: .black))
             Text(getArabicNumber(romanNum))
             .strikethrough(!validateInput(text: romanNum.uppercased()))

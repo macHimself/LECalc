@@ -50,17 +50,23 @@ struct RootCalculator: View {
                                 Text("a")
                             }.frame(width:75)
                                 .multilineTextAlignment(.center)
+#if os(iOS)
                                 .keyboardType(.numbersAndPunctuation)
+#endif
                             TextField(text: $b, prompt: Text("b const")) {
                                 Text("b")
                             }.frame(width:75)
                                 .multilineTextAlignment(.center)
+#if os(iOS)
                                 .keyboardType(.numbersAndPunctuation)
+#endif
                             TextField(text: $c, prompt: Text("c const")) {
                                 Text("c")
                             }.frame(width:75)
                                 .multilineTextAlignment(.center)
+#if os(iOS)
                                 .keyboardType(.numbersAndPunctuation)
+#endif
                             Spacer()
                         }.shadow(color: .gray, radius: 10, x: 1, y: 2)
                 }

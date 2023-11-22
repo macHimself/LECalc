@@ -36,7 +36,9 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Extra Mathematic Functions")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+#endif
         .toolbar {
         }
     }

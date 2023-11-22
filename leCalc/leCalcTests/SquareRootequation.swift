@@ -9,7 +9,7 @@
 import XCTest
 
 class SquareRootequation: XCTestCase {
-
+    
     var squareRootequation: RootCalculator!
 
     override func setUp() {
@@ -24,7 +24,6 @@ class SquareRootequation: XCTestCase {
     
     func test_is_valid_output_presentFunction() throws {
         XCTAssertNoThrow(try squareRootequation.presentFunction("1", "2","1"))
-
     }
     
     func test_is_giving_correctStrings() {

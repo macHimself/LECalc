@@ -40,7 +40,9 @@ struct IntegerFactorization: View {
             }
                 .frame(width:280)
                 .multilineTextAlignment(.center)
+#if os(iOS)
                 .keyboardType(.numbersAndPunctuation)
+#endif
             Text(getIntegerFactorization(compositeNumber))
                 .frame(alignment: .center)
             

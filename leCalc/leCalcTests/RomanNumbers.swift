@@ -51,7 +51,6 @@ class TestRomanNumbersFunc: XCTestCase {
         XCTAssertEqual(testRomanNumbersFunc.getRomanNumber("40"), "XL")
         XCTAssertEqual(testRomanNumbersFunc.getRomanNumber("400"), "CD")
         XCTAssertEqual(testRomanNumbersFunc.getRomanNumber("3999"), "MMMCMXCIX")
-        
     }
     
     func test_romanToArabic() {
@@ -61,5 +60,4 @@ class TestRomanNumbersFunc: XCTestCase {
         XCTAssertEqual(testRomanNumbersFunc.getArabicNumber("CD"), "400")
         XCTAssertEqual(testRomanNumbersFunc.getArabicNumber("MMMCMXCIX"), "3999")
     }
-    
 }
