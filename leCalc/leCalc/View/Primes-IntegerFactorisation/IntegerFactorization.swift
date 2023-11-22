@@ -55,7 +55,7 @@ struct IntegerFactorization: View {
         }
     
     func isValidForIntegerFactorization(_ num: Int) -> Bool {
-        return num > 1
+        return num > 1 && num < 99999999
     }
     
     func getIntegerFactorization(_ cNum: String) -> String {
@@ -87,15 +87,38 @@ struct IntegerFactorization: View {
             }
             i += 1
         }
-        
-        
         return answer
     }
     
     func presentWithExponents(_ primes: String) -> String {
         var equation = ""
         var x =  primes.components(separatedBy:" \n")
-        
+        var nums: [String:Int] = [:]
+
+        for item in x {
+            var isIncluded = false
+            for (key, value) in nums {
+                if item == key {
+                    isIncluded = true
+                }
+            }
+            if isIncluded == true {
+                nums[item]! += 1
+            } else {
+                nums[item] = 1
+            }
+        }
+        //TODO: ordered print of numbers
+        for (key, amount) in nums {
+            if key != "" {
+                equation += "\(key)^\(amount) ."
+            }
+            
+        }
+        equation = equation.replacingOccurrences(of: "please insert composite number", with: "")
+        equation = equation.replacingOccurrences(of: "please use Integer > 1", with: "please: n \\in (1;99999999)")
+        equation = equation.replacingOccurrences(of: " is prime number^1", with: "\\in\\mathbb{P}")
+        equation = equation.replacingOccurrences(of: "^1", with: " ")
         return equation
     }
 }
