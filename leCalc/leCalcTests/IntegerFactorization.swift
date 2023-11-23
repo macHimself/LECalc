@@ -42,10 +42,12 @@ class TestIntegerFactorization: XCTestCase {
     
     func test_getIntegerFactorization() {
         XCTAssertEqual(testIntegerFactorization.getIntegerFactorization("4"), "2 \n2 \n")
+        XTCAssertEqual(testIntegerFactorization.getIntegerFactorization("36"), "2 \n2 \n3 \n3")
     }
     
     func test_presentWithExponents() {
-        XCTAssertEqual(testIntegerFactorization.presentWithExponents("2 \n2 \n"), "2^{2} .")
-        XCTAssertEqual(testIntegerFactorization.presentWithExponents("2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n"), "2^{10} .")
+        XCTAssertEqual(testIntegerFactorization.presentWithExponents("2 \n2 \n"), "2^{2}")
+        XCTAssertEqual(testIntegerFactorization.presentWithExponents("2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n2 \n"), "2^{10}")
+        XCTAssertEqual(testIntegerFactorization.presentWithExponents("2 \n2 \n3 \n3"), "2^{2} . 3^{2}")
     }
 }
