@@ -15,9 +15,11 @@ final class leCalcUITestsLaunchTests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        
+        let app = XCUIApplication()
     }
 
-    func testLaunch() throws {
+    /*func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
 
@@ -28,5 +30,22 @@ final class leCalcUITestsLaunchTests: XCTestCase {
         attachment.name = "Launch Screen"
         attachment.lifetime = .keepAlways
         add(attachment)
+    }*/
+    
+    func testOne() {
+        
+        
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Roman Numbers"]/*[[".cells.buttons[\"Roman Numbers\"]",".buttons[\"Roman Numbers\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCTAssertTrue(app.staticTexts["please, insert number 0-3999"].exists)
+        app.textFields["arabic number"].tap()
+        app.textFields["arabic number"].typeText("123")
+        XCTAssertTrue(app.staticTexts["CXXIII"].exists)
+        
+        
+        
     }
 }
